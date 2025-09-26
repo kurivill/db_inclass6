@@ -21,9 +21,9 @@ public class creds_provider {
         Dotenv dotenv = Dotenv.load();
 
         Map<String, String> creds = new HashMap<>();
-        creds.put("javax.persistence.jdbc.url", dotenv.get("DB_URL"));
-        creds.put("javax.persistence.jdbc.user", dotenv.get("DB_USER"));
-        creds.put("javax.persistence.jdbc.password", dotenv.get("DB_PASSWORD"));
+        creds.put("jakarta.persistence.jdbc.url", dotenv.get("DB_URL"));
+        creds.put("jakarta.persistence.jdbc.user", dotenv.get("DB_USER"));
+        creds.put("jakarta.persistence.jdbc.password", dotenv.get("DB_PASSWORD"));
 
         emf = Persistence.createEntityManagerFactory("devpu", creds);
     }
